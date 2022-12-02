@@ -34,7 +34,7 @@ func main() {
 	fmt.Printf("Day two aoc 2022\n")
 	fmt.Printf("Part one: %d\n", total_points)
 
-	// part one
+	// part two
 	total_points2 := 0
 	rock_paper_scissor2 := map[string]string{"AA": "C", "BB": "B", "CC": "A", "AB": "A", "AC": "B", "BA": "A", "BC": "C", "CA": "B", "CB": "C"}
 
