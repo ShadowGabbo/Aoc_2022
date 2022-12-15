@@ -7,10 +7,18 @@ import (
 	"os"
 )
 
-type kv struct {
-	Key   int
-	Value int
+type Play rune
+
+type turn struct {
+	my_choice       Play
+	opponent_choice Play
 }
+
+const (
+	Rock    Play = 'A'
+	Paper        = 'B'
+	Scissor      = 'C'
+)
 
 func main() {
 	file, err := os.Open("input.txt")
@@ -29,6 +37,7 @@ func main() {
 		lines = append(lines, line)
 		opponent_choice := line[0]
 		my_choice := line[2] - 23 // so i can use rune as numbers
+		// turn := turn{my_choice: Play(my_choice), opponent_choice: Play(opponent_choice)}
 		total_points += rock_paper_scissor[string(my_choice)+string(opponent_choice)]
 	}
 	fmt.Printf("Day two aoc 2022\n")
